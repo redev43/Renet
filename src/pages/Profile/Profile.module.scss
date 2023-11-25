@@ -1,0 +1,368 @@
+@import "@/styles/variables.scss";
+
+.profile {
+  padding-bottom: 5vh;
+
+  @media (max-width: 700px) {
+    padding-bottom: 15vh;
+  }
+
+  .user_card {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .settings_button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+
+      @media (max-width: 600px) {
+        position: static;
+        margin-top: 20px;
+      }
+
+      button {
+        padding: 6px 40px;
+        background: #3AAFA9;
+        border-radius: 23px;
+        display: flex;
+        align-items: center;
+        border: 0;
+
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .banner {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #202020;
+      z-index: -10;
+    }
+
+    .user {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30vh;
+
+      .avatar {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: #595959;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 35px;
+        }
+
+        .set_avatar {
+          background: #272727;
+          position: absolute;
+          bottom: -5px;
+          right: -5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+
+          svg {
+            width: 15px;
+          }
+        }
+      }
+
+      h2 {
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+
+        svg {
+          margin-left: 10px;
+        }
+      }
+
+      .user_date {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        .user_date_block {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        .info_block {
+          display: flex;
+          align-items: center;
+          margin-left: 10px;
+          margin-right: 10px;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .content {
+    padding: 0 10vw;
+    position: relative;
+    padding-top: 100px;
+    border-top: 1px solid #595959;
+
+    .settings {
+      form {
+        .row {
+          margin-top: 5vh;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+
+          @media (max-width: 870px) {
+            display: block;
+          }
+
+          .input {
+            @media (max-width: 870px) {
+              width: 100%;
+              position: relative;
+              margin-top: 20px;
+            }
+
+            input {
+              background: transparent;
+              width: 25vw;
+              padding: 6px 0;
+              border-radius: 10px;
+              border: 1px solid #595959;
+              margin-top: 10px;
+
+              @media (max-width: 870px) {
+                width: 100%;
+                padding: 12px 0;
+              }
+            }
+          }
+
+          .input_password {
+            @media (max-width: 870px) {
+              width: 100%;
+              position: relative;
+              margin-top: 20px;
+            }
+
+            input {
+              background: #272727;
+              border: 0;
+              border-radius: 10px;
+              padding: 6px 0;
+              width: 13vw;
+              margin-top: 10px;
+
+              @media (max-width: 870px) {
+                width: 100%;
+                padding: 12px 0;
+              }
+            }
+          }
+
+          .languages {
+            .languages_selects {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+
+              @media (max-width: 870px) {
+                display: block;
+              }
+
+              .language {
+                display: flex;
+                padding: 8px 10px;
+                width: 15vw;
+                border-radius: 10px;
+                background: var(--272727, #272727);
+                align-items: center;
+                justify-content: space-between;
+                margin-right: 10px;
+
+                @media (max-width: 870px) {
+                  width: 100%;
+                  padding: 12px 10px;
+                  margin-top: 20px;
+                }
+              }
+            }
+          }
+
+          .notifications {
+            .notifications_checkbox {
+              margin-top: 10px;
+              display: flex;
+              align-items: center;
+
+              .checkbox {
+                margin-right: 10px;
+                width: 9vw;
+                position: relative;
+                height: 2.5vw;
+                display: flex;
+                border: 1px solid #595959;
+                border-radius: 23px;
+                display: flex;
+                align-items: center;
+
+                div {
+                  width: 2vw;
+                  height: 2vw;
+                  border-radius: 50%;
+                  background: #3AAFA9;
+                  position: absolute;
+
+                  &.circle {
+                    left: 3px;
+                  }
+
+                  &.circle_active {
+                    right: 3px;
+                  }
+
+                  @media (max-width: 870px) {
+                    width: 20px;
+                    height: 20px;
+                  }
+                }
+
+                @media (max-width: 870px) {
+                  order: 2;
+                  width: 70px;
+                  height: 30px;
+                }
+              }
+
+              .notifications_text {
+                @media (max-width: 870px) {
+                  order: 1;
+                }
+              }
+
+              @media (max-width: 870px) {
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+
+            @media (max-width: 870px) {
+              margin-top: 50px;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      .row {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 800px) {
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .col {
+          height: fit-content;
+
+          h2 {
+            font-weight: 500;
+            margin-bottom: 10px;
+          }
+
+          &:first-child {
+            width: 65%;
+
+            @media (max-width: 800px) {
+              width: 100%;
+              order: 2;
+            }
+          }
+
+          &:last-child {
+            width: 30%;
+
+            .skills {
+              background: #272727;
+              border-radius: 10px;
+              padding: 20px 20px;
+              margin-top: 20px;
+
+              .category {
+                &:not(:first-child) {
+                  margin-top: 30px;
+                }
+              }
+
+              @media (max-width: 800px) {
+                order: 1;
+              }
+            }
+
+            .more {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px 0;
+              background: #272727;
+              border-radius: 10px;
+              margin-top: 10px;
+
+              button {
+                border: 0;
+                background: transparent;
+
+                .close_more {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+
+            @media (max-width: 800px) {
+              order: 1;
+              margin-bottom: 10vh;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "@/styles/variables.scss";
+
+.navigation {
+  position: fixed;
+  width: 100%;
+  height: calc($index * 3);
+  background: #272727;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .col {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        width: calc($index * 1.5);
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .notifications {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        svg {
+          width: calc($index * 1.5);
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: calc($index * 1.5);
+          height: calc($index * 1.5);
+          background: #595959;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          position: relative;
+
+          svg {
+            width: 80%;
+          }
+        }
+
+        h4 {
+          font-weight: 500;
+          margin-right: 10px;
+        }
+
+        .down {
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

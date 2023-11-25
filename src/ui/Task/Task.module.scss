@@ -1,0 +1,58 @@
+@import "@/styles/variables.scss";
+
+.task {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  padding: 20px 20px;
+  margin-top: 20px;
+  background: #272727;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 730px) {
+    display: none;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+
+    h4 {
+      font-weight: 500;
+    }
+
+    .desc {
+      display: flex;
+      align-items: center;
+      margin-left: 15px;
+
+      p {
+        font-size: calc($index * .7);
+        color: #AAA;
+        margin-left: 5px;
+      }
+    }
+
+    h3 {
+      span {
+        color: #3AAFA9;
+      }
+    }
+
+    button {
+      margin-left: 20px;
+      padding: 10px 30px;
+      border-radius: 23px;
+      background: #3AAFA9;
+      border: 0;
+    }
+
+    &:first-child {
+      h4 {
+        margin-left: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "@/styles/variables.scss";
+
+.mobile {
+  width: 100%;
+  height: calc($index * 4);
+  border-top: 1px solid #595959;
+  background: #272727;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: none;
+
+  @media (max-width: 700px) {
+    display: flex;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw;
+    list-style: none;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
