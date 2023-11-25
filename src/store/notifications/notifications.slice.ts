@@ -1,5 +1,3 @@
-"use client"
-
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 export const notificationsSlice = createSlice({
