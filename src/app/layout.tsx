@@ -8,7 +8,7 @@ import MobileNavigation from '@/ui/MobileNavigation/MobileNavigation'
 const inter = Roboto_Flex({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Renet',
+  title: 'Renet Network',
   description: 'renet social network',
 }
 
