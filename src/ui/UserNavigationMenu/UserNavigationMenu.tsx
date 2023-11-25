@@ -1,7 +1,12 @@
+import { useActions } from "@/hooks/useActions.hook";
+import { useTypedSelector } from "@/hooks/useTypedSelector.hook";
 import styles from "@/ui/UserNavigationMenu/UserNavigationMenu.module.scss"
 import Link from "next/link";
 
 const UserNavigationMenu = () => {
+  const logout = useTypedSelector(state => state.logout)
+  const dispatch = useActions()
+
   return <div className={styles.user_navigation_menu}>
     <div className={styles.block}>
       <div className={styles.avatar}>
@@ -45,7 +50,11 @@ const UserNavigationMenu = () => {
     </div>
     <div className={styles.block}>
       <ul>
-        <Link href={"/"} className={styles.link}>
+        <div className={styles.link} onClick={() => {
+          dispatch.toggleLogout(!logout)
+          dispatch.toggleNavigation(false)
+          dispatch.toggleNotifications(false)
+        }}>
           <li>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.99654 2.5H2.5V17.5H10" stroke="#AAAAAA" strokeWidth="0.833333" strokeLinecap="round" strokeLinejoin="round" />
@@ -54,7 +63,7 @@ const UserNavigationMenu = () => {
             </svg>
             Log out
           </li>
-        </Link>
+        </div>
       </ul>
     </div>
   </div>

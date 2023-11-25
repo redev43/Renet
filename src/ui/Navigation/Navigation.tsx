@@ -6,10 +6,12 @@ import styles from "@/ui/Navigation/Navigation.module.scss"
 import Image from "next/image";
 import UserNavigationMenu from "../UserNavigationMenu/UserNavigationMenu";
 import Notifications from "../Notifications/Notifications";
+import Logout from "../Logout/Logout";
 
 const Navigation = () => {
   const navigation_user = useTypedSelector(state => state.navigation_user)
   const notifications = useTypedSelector(state => state.notifications)
+  const logout = useTypedSelector(state => state.logout)
   const dispatch = useActions()
 
   return <nav className={styles.navigation}>
@@ -19,6 +21,9 @@ const Navigation = () => {
     {notifications && (
       <Notifications />
     )}
+    {logout && (
+      <Logout />
+    )}
     <div className={styles.row}>
       <div className={styles.col}>
         <div className={styles.logo}>
@@ -26,7 +31,26 @@ const Navigation = () => {
         </div>
       </div>
       <div className={styles.col}>
-        <div className={styles.notifications} onClick={() => dispatch.toggleNotifications(!notifications)}>
+        <div className={styles.count}>
+          <p>54</p>
+          <div className={styles.vector}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_12_2811)">
+                <path d="M0 5.67359C0 2.91216 2.23858 0.673584 5 0.673584H7.47628C8.80263 0.673584 10.0746 1.20058 11.0124 2.1386L15.3937 6.52129C15.8652 6.99289 16.13 7.63242 16.13 8.29926C16.13 10.5365 13.4278 11.66 11.8417 10.0822L10.7535 8.99978C8.76666 7.02348 5.38175 8.42744 5.37698 11.2298L5.36092 20.652C5.3584 22.1306 4.15905 23.3279 2.68046 23.3279C1.20008 23.3279 0 22.1278 0 20.6474V5.67359Z" fill="#3AAFA9" />
+                <path d="M24 18.3277C24 21.0891 21.7614 23.3277 19 23.3277H16.5262C15.1996 23.3277 13.9274 22.8005 12.9896 21.8621L8.60949 17.4793C8.13794 17.0075 7.87305 16.3677 7.87305 15.7006C7.87305 13.4622 10.5765 12.338 12.1637 13.9165L13.2494 14.9962C15.2363 16.9723 18.621 15.5681 18.6257 12.7658L18.6413 3.34731C18.6437 1.86926 19.8426 0.672363 21.3206 0.672363C22.8004 0.672363 24 1.87196 24 3.35174V18.3277Z" fill="#3AAFA9" />
+              </g>
+              <defs>
+                <clipPath id="clip0_12_2811">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <div className={styles.notifications} onClick={() => {
+          dispatch.toggleNotifications(!notifications)
+          dispatch.toggleLogout(false)
+        }}>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.6665 25.3333V12C6.6665 6.84529 10.8452 2.66663 15.9998 2.66663C21.1545 2.66663 25.3332 6.84529 25.3332 12V25.3333M2.6665 25.3333H29.3332" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
             <path d="M15.9998 29.3334C17.8408 29.3334 19.3332 27.841 19.3332 26V25.3334H12.6665V26C12.6665 27.841 14.1589 29.3334 15.9998 29.3334Z" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
@@ -39,7 +63,10 @@ const Navigation = () => {
             </svg>
           </div>
           <h4>User_123</h4>
-          <div className={styles.down} onClick={() => { dispatch.toggleNavigation(!navigation_user) }}>
+          <div className={styles.down} onClick={() => {
+            dispatch.toggleNavigation(!navigation_user)
+            dispatch.toggleLogout(false)
+          }}>
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
               <path d="M24 12L16 20L8 12" stroke="#AAAAAA" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
