@@ -1,0 +1,138 @@
+@import "@/styles/variables.scss";
+
+.login {
+  width: 100%;
+  height: calc(100vh - $index * 3);
+  position: relative;
+  top: calc($index * 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    height: fit-content;
+
+    @media (max-width: 875px) {
+      width: 35%;
+    }
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+
+    p {
+      color: var(--aaaaaa, #AAA);
+      margin-top: 5px;
+    }
+
+    .input {
+      margin-top: 20px;
+      width: 100%;
+
+      input {
+        padding: 8px 0;
+        width: 100%;
+        color: #000;
+        border-radius: 10px;
+        background: #202020;
+        border: 1px solid #595959;
+        margin-top: 10px;
+      }
+    }
+
+    .remember {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+
+      .checkbox {
+        margin-right: 10px;
+        width: 60px;
+        height: 30px;
+        position: relative;
+        display: flex;
+        border: 1px solid #595959;
+        border-radius: 23px;
+        display: flex;
+        align-items: center;
+
+        div {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background: #3AAFA9;
+          position: absolute;
+
+          &.circle {
+            left: 3px;
+          }
+
+          &.circle_active {
+            right: 3px;
+          }
+        }
+      }
+    }
+
+    .submit {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        padding: 10px 80px;
+        border-radius: 23px;
+        border: 0;
+        background: #3AAFA9;
+
+        @media (max-width: 600px) {
+          padding: 10px 0;
+          width: 100%;
+        }
+      }
+    }
+
+    .links {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 150px;
+      height: 30px;
+      border-radius: 23px;
+      background: #272727;
+
+      p {
+        font-size: 13px;
+        color: #fafafa;
+      }
+
+      .active {
+        width: 75px;
+        height: 35px;
+        border-radius: 23px;
+        background: #595959;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .not_active {
+        width: 75px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}

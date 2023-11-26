@@ -99,6 +99,23 @@
           align-items: center;
         }
       }
+
+      .auth {
+        display: flex;
+
+        .button {
+          button {
+            padding: 8px 20px;
+            border-radius: 23px;
+            background: #3AAFA9;
+            border: 0;
+          }
+
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
     }
   }
 }

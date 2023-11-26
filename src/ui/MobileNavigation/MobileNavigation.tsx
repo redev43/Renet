@@ -1,10 +1,15 @@
+"use client"
+
+import { useActions } from "@/hooks/useActions.hook";
 import styles from "@/ui/MobileNavigation/MobileNavigation.module.scss"
 import Link from "next/link";
 
 const MobileNavigation = () => {
+  const dispatch = useActions()
+
   return <nav className={styles.mobile}>
     <ul>
-      <Link href={"/"}>
+      <Link href={"/"} onClick={() => dispatch.toggleMenu(false)}>
         <li>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 12V28H26V12L16 4L6 12Z" stroke="#AAAAAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -13,7 +18,7 @@ const MobileNavigation = () => {
           </svg>
         </li>
       </Link>
-      <Link href={"/"}>
+      <Link href={"/"} onClick={() => dispatch.toggleMenu(false)}>
         <li>
           <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 25.3333V12C7 6.84529 11.1787 2.66663 16.3333 2.66663C21.488 2.66663 25.6667 6.84529 25.6667 12V25.3333M3 25.3333H29.6667" stroke="#AAAAAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -21,7 +26,7 @@ const MobileNavigation = () => {
           </svg>
         </li>
       </Link>
-      <Link href={"/profile"}>
+      <Link href={"/profile"} onClick={() => dispatch.toggleMenu(false)}>
         <li>
           <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.6668 13.3334C19.6123 13.3334 22.0002 10.9456 22.0002 8.00008C22.0002 5.05456 19.6123 2.66675 16.6668 2.66675C13.7213 2.66675 11.3335 5.05456 11.3335 8.00008C11.3335 10.9456 13.7213 13.3334 16.6668 13.3334Z" stroke="#AAAAAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -29,7 +34,7 @@ const MobileNavigation = () => {
           </svg>
         </li>
       </Link>
-      <Link href={"/menu"}>
+      <div className={styles.link} onClick={() => dispatch.toggleMenu(true)}>
         <li>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.2998 7.96643H26.6331" stroke="#AAAAAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -37,7 +42,7 @@ const MobileNavigation = () => {
             <path d="M5.2998 23.9664H26.6331" stroke="#AAAAAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </li>
-      </Link>
+      </div>
     </ul>
   </nav>
 }

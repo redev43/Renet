@@ -4,13 +4,15 @@ import { reducer as notificationsSlice } from "./notifications/notifications.sli
 import { reducer as avatarSlice } from "./avatar/avatar.slice";
 import { reducer as logoutSlice } from "./logout/logout.slice";
 import { reducer as usernameSlice } from "./username/username.slice";
+import { reducer as menuSlice } from "./menu/menu.slice";
 
 const redusers = combineReducers({
   navigation_user: navigationUserSlice,
   notifications: notificationsSlice,
   avatar: avatarSlice,
   logout: logoutSlice,
-  username: usernameSlice
+  username: usernameSlice,
+  menu: menuSlice
 })
 
 export const store = configureStore({
