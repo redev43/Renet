@@ -34,6 +34,10 @@
       h2 {
         font-weight: 500;
         margin-bottom: 10px;
+
+        @media (min-width: 1800px) {
+          font-size: calc($index);
+        }
       }
 
       &:first-child {
@@ -58,10 +62,20 @@
             &:not(:first-child) {
               margin-top: 30px;
             }
+
+            h4 {
+              @media (min-width: 1800px) {
+                font-size: calc($index);
+              }
+            }
           }
 
           @media (max-width: 800px) {
             order: 1;
+          }
+
+          @media (min-width: 1800px) {
+            padding: 40px 40px;
           }
         }
 
@@ -78,6 +92,13 @@
           button {
             border: 0;
             background: transparent;
+
+            svg {
+              @media (min-width: 1800px) {
+                width: 30px;
+                height: 30px;
+              }
+            }
 
             .close_more {
               transform: rotate(180deg);

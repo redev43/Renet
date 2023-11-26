@@ -57,7 +57,7 @@ const Navigation = () => {
               dispatch.toggleNotifications(!notifications)
               dispatch.toggleLogout(false)
             }}>
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="300" height="300" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.6665 25.3333V12C6.6665 6.84529 10.8452 2.66663 15.9998 2.66663C21.1545 2.66663 25.3332 6.84529 25.3332 12V25.3333M2.6665 25.3333H29.3332" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                 <path d="M15.9998 29.3334C17.8408 29.3334 19.3332 27.841 19.3332 26V25.3334H12.6665V26C12.6665 27.841 14.1589 29.3334 15.9998 29.3334Z" stroke="#AAAAAA" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
