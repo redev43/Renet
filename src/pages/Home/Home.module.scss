@@ -20,7 +20,7 @@
   }
 
   @media (min-width: 1800px) {
-    padding: 0 20vw;
+    padding: 0 25vw;
     top: 10vh;
   }
 
@@ -70,7 +70,7 @@
 
             h4 {
               @media (min-width: 1800px) {
-                font-size: calc($index);
+                font-size: calc($index * .8);
               }
             }
           }
