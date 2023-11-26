@@ -1,3 +1,5 @@
+@import "@/styles/variables.scss";
+
 .register {
   display: flex;
   flex-direction: column;
@@ -5,109 +7,12 @@
   justify-content: center;
   position: relative;
   padding-bottom: 5vh;
+  height: calc(100vh - $index * 3);
+  position: relative;
+  top: calc($index * 3);
 
   @media (max-width: 700px) {
     padding-bottom: 15vh;
-  }
-
-  .user_card {
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-
-    .banner {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, #202020 0%, #272727 61.98%, #202020 100%);
-      z-index: -10;
-    }
-
-    .user {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 25vh;
-
-      .avatar {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        background: #595959;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        svg {
-          width: 35px;
-        }
-
-        .set_avatar {
-          background: #272727;
-          position: absolute;
-          bottom: -5px;
-          right: -5px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          width: 30px;
-          height: 30px;
-
-          svg {
-            width: 15px;
-          }
-        }
-      }
-
-      h2 {
-        display: flex;
-        align-items: center;
-        margin-top: 30px;
-
-        svg {
-          margin-left: 10px;
-        }
-      }
-
-      .user_date {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-
-        .user_date_block {
-          display: flex;
-          align-items: center;
-          margin-left: 10px;
-          margin-right: 10px;
-
-          svg {
-            margin-right: 10px;
-          }
-        }
-      }
-
-      .info {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-
-        .info_block {
-          display: flex;
-          align-items: center;
-          margin-left: 10px;
-          margin-right: 10px;
-
-          svg {
-            margin-right: 10px;
-          }
-        }
-      }
-    }
   }
 
   form {
@@ -116,7 +21,6 @@
     align-items: center;
     width: 25%;
     height: fit-content;
-    margin-top: 10vh;
 
     @media (max-width: 875px) {
       width: 35%;

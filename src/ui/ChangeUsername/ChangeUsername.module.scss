@@ -4,11 +4,14 @@
   height: fit-content;
   padding: 20px 20px;
   background: #272727;
-  top: 50vh;
-  left: 40vw;
   z-index: 10;
   border-radius: 10px;
   box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.15);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 
   @media(max-width: 700px) {
     left: 20vw;

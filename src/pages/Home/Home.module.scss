@@ -6,6 +6,11 @@
   top: 20vh;
   padding-bottom: 5vh;
 
+  @media (max-width: 700px) {
+    padding: 0;
+    padding-bottom: 5vh;
+  }
+
   @media (max-width: 800px) {
     top: 10vh;
   }
