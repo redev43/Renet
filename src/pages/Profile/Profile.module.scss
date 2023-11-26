@@ -217,6 +217,12 @@
       padding-top: 100px;
     }
 
+    @media (min-width: 1800px) {
+      padding: 0 20vw;
+      padding-top: 100px;
+      top: 10vh;
+    }
+
     .settings {
       form {
         .row {

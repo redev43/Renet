@@ -19,6 +19,11 @@
     padding-bottom: 15vh;
   }
 
+  @media (min-width: 1800px) {
+    padding: 0 20vw;
+    top: 10vh;
+  }
+
   .row {
     display: flex;
     justify-content: space-between;
