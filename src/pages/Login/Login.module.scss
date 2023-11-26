@@ -93,10 +93,17 @@
         border-radius: 23px;
         border: 0;
         background: #3AAFA9;
+        transition: all .4s ease;
 
         @media (max-width: 600px) {
           padding: 10px 0;
           width: 100%;
+        }
+
+        &:hover {
+          background: #31928d;
+          transform: scale(1.05);
+          transition: all .4s ease;
         }
       }
     }

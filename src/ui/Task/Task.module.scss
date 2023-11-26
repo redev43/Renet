@@ -75,10 +75,17 @@
       border-radius: 23px;
       background: #3AAFA9;
       border: 0;
+      transition: all .4s ease;
 
       @media (min-width: 1800px) {
         padding: 15px 70px;
         font-size: calc($index * .7);
+      }
+
+      &:hover {
+        background: #349b96;
+        transform: scale(1.05);
+        transition: all .4s ease;
       }
     }
 

@@ -32,6 +32,7 @@
         display: flex;
         align-items: center;
         border: 0;
+        transition: all .4s ease;
 
         svg {
           margin-right: 10px;
@@ -45,6 +46,12 @@
         @media (min-width: 1800px) {
           font-size: calc($index * .9);
           padding: 10px 50px;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+          background: #31928d;
+          transition: all .4s ease;
         }
       }
     }
